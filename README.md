@@ -27,23 +27,23 @@ Run the installation script. This script will automatically download the necessa
 
 インストールスクリプトを実行してください。このスクリプトは必要な依存関係を自動的にダウンロードし、既存の `ibus-engine-mozc` をバックアップした上で、Bazel経由で最新のMozcをソースからビルドし、分離設定を適用します。
 
-bash
+```bash
 git clone https://github.com/your-username/mozc-ibus-split.git
 cd mozc-ibus-split/scripts
 chmod +x install.sh
 ./install.sh
-
+```
 
 ## Rollback (Recovery) / ロールバック (復元)
 If you encounter any issues or wish to revert to the default single-engine Mozc, run the rollback script. It will safely restore your backed-up binary and restart the IBus daemon.
 
 問題が発生した場合、またはデフォルトの単一エンジン版Mozcに戻したい場合は、ロールバックスクリプトを実行してください。バックアップされたバイナリを安全に復元し、IBusデーモンを再起動します。
 
-bash
+```bash
 cd mozc-ibus-split/scripts
 chmod +x rollback.sh
 ./rollback.sh
-
+```
 
 ## Disclaimer / 免責事項
 This project modifies user-space binaries and IBus configurations. It does not modify kernel-level operations. However, please use it at your own risk. 
